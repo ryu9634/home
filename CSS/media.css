@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*컨텐츠 크기 안에 마진과 패딩이 들어가는것 */
+    
+}
+#container{
+    width: 100%;
+}
+.header {
+    width: 100%;
+    background-color: rgb(85, 85, 85);
+}
+#home {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 18px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.nav >ul {
+    height: 50px;
+    list-style: none;
+    color: white;
+}
+.nav >ul>li {
+    float: left;
+    padding: 10px;
+    margin: 5px;
+}
+/*
+    구형폰 : 320px
+    현재폰 : 360~375px
+*/
+.nav, #contents {
+    width: 310px;
+    margin: 0 auto;
+}
+#home {
+    visibility: hidden;
+}
+.nav>ul {
+    font-size: 10px;    
+}
+#intro {
+    width: 100%;
+    margin-bottom: 20px;
+}
+#intro > img {
+    width: 100%;
+    padding: 10px;
+}
+#desc{
+    width: 100%;
+    padding: 10px;
+    line-height: 1.5;
+    font-size: 16px;
+}
+.footer {
+    width: 100%;
+    height: 50px;
+    padding: 20px;    
+    background-color: #000;
+    color:#FFF    
+}
+.footer>p{
+    text-align: center;
+}
+/*
+    테블릿 : 768px~
+*/
+@media screen and (min-width: 768px) {
+    #home {
+        visibility: hidden;
+    }
+    .nav, #contents{
+        width: 750px;
+        margin: 0 auto;
+    }
+    .nav>ul {
+        font-size: 14px;    
+    }
+    #intro{
+        width: 100%;
+    }
+    #intro>img{
+        width: 20%;
+        padding: 10px;
+    }
+    #desc{
+        width: 100%;
+        padding: 10px;
+        margin: 10px auto;
+    }
+    .footer {
+        height: 70px;
+        padding: 30px;
+        background-color: gray;
+    }
+    
+}
+
+/*
+    데스크탑 가로 사이즈 : 1024px ~
+*/
+@media screen and (min-width: 1024px) {
+    #home {
+        visibility: visible;
+    }
+    .nav, #contents{
+        width: 1000px;
+        margin: 0 auto;
+        padding-bottom: 70px;
+    }
+    .nav>ul {
+        font-size: 24px;    
+    }
+    #intro{
+        width: 40%;
+        margin: 0 auto;
+        display: flex;
+        float: left;
+        flex-wrap: wrap;
+    }
+    #intro>img{
+        width: 40%;
+        padding: 10px;
+    }
+    #img3{
+        align-items: flex-end;
+    }
+    #desc{
+        width: 100%;
+        padding: 10px;
+        margin: 10px auto;
+    }
+    .footer {
+        height: 70px;
+        padding: 30px;
+        background-color: rgb(0, 0, 0);
+    }
+    
+}

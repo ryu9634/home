@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>류상표</title>
+</head>
+<body>
+    
+
+    <script>
+        'use strict';
+        
+        let timeId = null;
+        const clock = document.querySelector('.result');
+        
+
+        function printTime() {
+            const date = new Date();
+            const hh  = date.getHours();
+            const mm = date.getMinutes();
+            const ss = date.getSeconds();
+
+            document.getElementById("result").innerHTML =`${hh<10 ? `0${hh}`:hh} : ${mm<10 ? `0${mm}`:mm} : ${ss<10 ? `0${ss}`:ss}`;
+
+        }
+
+        function startClock() {            
+            timeId = setInterval(printTime, 0);            
+        }
+
+        function stopClock() {
+            clearInterval(timeId);            
+        }
+
+        startClock();
+
+    </script>
+    <div class="wrap">
+        <div class="top">
+            <ul class="nav"  align="right">
+                <li> <a href="https://accounts.google.com/ServiceLogin/signinchooser?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F%26ogbl%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"> Gmail</a></li>
+                <li> <a href="https://www.google.co.kr/imghp?hl=ko&ogbl"> 이미지</a></li>
+                <li> <a href="#"> ≡≡</a></li>
+                <li> 
+                    <div class="faceimg">
+                        <img src="./img/이니셜.png" alt="">
+                    </div>
+                </li>
+            </ul>
+            
+        </div>
+    </div>
+   
+    <div style="text-align: center; box-sizing: border-box; margin-bottom:100px; background-color: rgba(#fff, #fff, #fff, 0);  border-radius: 5px; width: 200px; height: 100px; color: white; margin: 20px auto; font-size: 2em;">
+        <div id="result" class="result" style="color: white;"></div>
+        <p>            
+            <input type="button" value="시작" onclick="startClock()">
+            <input type="button" value="중지" onclick="stopClock()">
+        </p> </div>
+    <div class="Mid">
+        <div id="introimg">          
+            <div id="wave"></div>
+            <div id="wave1"></div>
+            <div id="wave2"></div>
+            
+        </div>
+        
+        <div class"serch">
+            <ul class="serch">
+                <li id="mid1" >🔍</li>
+                <li id="mid2"><input id="serch1" type="serch" placeholder="Google 검색 또는 ULR 입력"></li>
+                <li id="mi3">
+                    <a href="https://blog.naver.com/ryusp0515" target="_blank">💡</a>                    
+                </li>
+            </ul>
+        </div>
+        <div class="quick">
+            <div class="fistLine">
+            <ul class="view1">
+                <li style="margin-left: 0px;"><a href="./resume.html"><img src="./img/target.png" alt=""></a><br>resume</li>
+                <li><a href="./favorites.html"><img src="./img/target.png" alt=""></a><br>faver</li>
+                <li><a href="./news.html"><img src="./img/target.png" alt=""></a><br>news</li>
+            </ul>
+        </div>
+        <div class="secondLine">
+            <ul class="view2">
+                <li style="margin-left: 0px;"><a href="./ad.html"><img src="./img/target.png" alt=""></a><br>ad</li>
+                <li><a href="./Join.html"><img src="./img/target.png" alt=""></a><br>Join</li>
+                <li><a href="./11_미디어쿼리2.html"><img src="./img/target.png" alt=""></a><br>media</li>
+            </ul>
+        </div>
+        <div class="thirdLine">
+            <ul class="view2">
+                <li style="margin-left: 0px;"><a href="./pagemap.html"><img src="./img/target.png" alt=""></a><br>Tour</li>
+                <li><a href="./copysite.html"><img src="./img/target.png" alt=""></a><br>google</li>
+                <li><a href="./IdNum.html"><img src="./img/target.png" alt=""></a><br>IdNum</li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="rec">
+        <ul>
+            <li>🔗</li>
+            <li><a href="https://500px.com/photo/53806716/Eternal-Flame-by-Carlos-Gotay/">
+            Carlos Gotay님의 사진</a></li>
+        </ul>
+    </div>
+    </div>
+</body>
+</html>
