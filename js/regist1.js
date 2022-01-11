@@ -129,6 +129,7 @@ let result = s1+s2+s3+s4+s5+s6+s7+s8+s9+s10+s11+s12;
 
     if(result == s13){
         alert('유효한 주민등록번호입니다');
+        birth();
         isssn.value ='y';
 
     }else{
@@ -140,4 +141,31 @@ let result = s1+s2+s3+s4+s5+s6+s7+s8+s9+s10+s11+s12;
 function ssnChange() {
     const isssn = document.getElementById('isssn');
     isssn.value  = 'n';
+}
+function birth(){
+    
+    let years = 0;
+    const ssn = $("#ssn1").val().concat($("#ssn2").val());
+
+    // 출생년 계산 2이상이면 2000년생
+    if($('#ssn2'.substring(0, 1) <= 2)){
+            years = "19"
+    }else if('#ssn2'.substring(0, 1) > 2){
+            years = "20"
+    }
+        
+    // 년/월/일 자리수 나눔
+    const year = Number(years.concat(ssn.substr(0,2)));
+    const month = Number(ssn.substr(2,2));
+    const day = Number(ssn.substr(4,2));
+        
+    $("[name='year']").val(year);
+    $("[name='month']").val(month);
+    $("[name='day']").val(day);
+
+    //제대로 연산됐는지 확인
+    console.log(year);
+    console.log(month);
+    console.log(day);
+
 }

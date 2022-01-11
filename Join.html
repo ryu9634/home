@@ -6,7 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./CSS/style1.css">
-    <script src="./js/regist1.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <script>
         function sample6_execDaumPostcode() {
@@ -57,6 +60,7 @@
             }).open();
         }
     </script>
+    <script src="./js/regist1.js"></script>
     <title>Join</title>
 </head>
 
@@ -90,8 +94,9 @@
                 <label>운동<input type="checkbox" name="hobby" value="운동"></label> <label>게임<input type="checkbox"
                         name="hobby" value="게임"></label>
             </p>
-            <p>주민등록번호 : <br><input type="text" name="ssn1" id="ssn1" maxlength="6" onkeyup="moveFocus()"> - <input type="password" name="ssn2" id="ssn2" maxlength="7"> <input type="button" value="주민등록번호 검증" onclick="ssnTest()">
-            </p>
+            <p>주민등록번호 : <br><input type="text" name="ssn1" id="ssn1" maxlength="6" onkeyup="moveFocus()"> - <input type="password" name="ssn2" id="ssn2" maxlength="7"> <input type="button" value="주민등록번호 검증" onclick="ssnCheck()">                
+            </p>        
+            <p id="birth">생년월일 : <br><input type="text" name="year" id="year" readonly>년 <input type="text" name="month" id="month" readonly>월 <input type="text" name="day" id="day" readonly>일<br></p>            
             <p>우편번호 : <input type="text" name="zipcode" id="sample6_postcode"> <input type="button" value="우편번호 검색"
                     onclick="sample6_execDaumPostcode()"></p>
             <p>주<span id="hi">투명</span>소 : <input type="text" name="address1" id="sample6_address"></p>
